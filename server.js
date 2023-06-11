@@ -1,6 +1,6 @@
 "use strict";
 
-const data = require("./MovieData/data.json");
+const data = require("./data.json");
 const express = require("express");
 require("dotenv").config();
 const axios = require("axios");
@@ -166,6 +166,7 @@ function getUsingID (req, res) {
     errorHandler(error, req, res);
   });
 }
+
 function Movie(id, title, release_date, poster_path, overview) {
   this.id = id;
   this.title = title;
